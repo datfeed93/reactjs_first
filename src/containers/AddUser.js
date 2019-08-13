@@ -16,11 +16,8 @@ class AddUser extends Component{
         this.props.addUserRequest(user);
     }
     render(){
-        console.log(12);
         let {users} = this.props;
-        console.log(users);
         if(users.message === 'created'){
-            console.log('dm');
             return <Redirect to='/list-user' />
         }
         return(
@@ -37,7 +34,6 @@ class AddUser extends Component{
     }
 }
 const mapStateToProps = (state) => {
-    //console.log(state);
     return {
         user: state.user,
         users: state.users

@@ -11,14 +11,13 @@ const users = (state = inititalState, action) => {
                 message: 'ok',
                 users:action.users
             }
-            return state;
+            return {...state};
         case Types.DELETE_USER :
             state.message = 'deleted';
-            return state;
+            return {...state};
         case Types.ADD_USER :
             state.message = 'created';
-            console.log(state);
-            return state;
+            return {...state};
         default:
             return state;
     }
